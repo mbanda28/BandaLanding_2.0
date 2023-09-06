@@ -40,3 +40,18 @@ async function fetchData(urlApi) {
     console.log(error);
   }
 })();
+
+
+const btnCorreo = document.getElementById("btn");
+
+btnCorreo.addEventListener("click", function() {
+  // Define el correo electrónico y asunto
+  const correoElectronico = "miguel_bx96@hotmail.com";
+  const asunto = "Contactame";
+
+  // Crea el enlace del correo electrónico
+  const enlaceCorreo = `mailto:${correoElectronico}?subject=${encodeURIComponent(asunto)}`;
+
+  // Abre el enlace del correo electrónico en una nueva ventana o pestaña del navegador
+  window.open(enlaceCorreo)
+});
